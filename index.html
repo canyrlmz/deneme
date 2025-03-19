@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özür Sayfası</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #evet {
+            background-color: green;
+            color: white;
+        }
+        #hayir {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Seni Üzdüğüm İçin Özür Dilerim, Barışalım mı SEVGİLİİMMM??? </h2>
+    <img src="resim.jpg" alt="Sevimli Kedi">
+    
+    <div class="buttons">
+        <button id="evet" onclick="alert('Seni ÇOOKK Seviyorum! ❤️')">Evet</button>
+        <button id="hayir">Hayır</button>
+    </div>
+
+    <script>
+        const hayirButon = document.getElementById("hayir");
+
+        hayirButon.addEventListener("mouseover", function() {
+            const maxX = window.innerWidth - this.clientWidth;
+            const maxY = window.innerHeight - this.clientHeight;
+            const newX = Math.random() * maxX;
+            const newY = Math.random() * maxY;
+            this.style.left = `${newX}px`;
+            this.style.top = `${newY}px`;
+        });
+    </script>
+
+</body>
+</html>
